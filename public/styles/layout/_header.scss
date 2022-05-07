@@ -1,0 +1,12 @@
+header {
+  width: 100%;
+  background-color: $main-color;
+  display: flex;
+  gap: 1em;
+  padding: 1em;
+
+  img {
+    width: 2em;
+    margin-left: 1em;
+  }
+}

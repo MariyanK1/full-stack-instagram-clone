@@ -1,0 +1,13 @@
+.avatar,
+.userAvatar {
+  width: 5em;
+  height: 5em;
+  border: $main-color solid 2px;
+  border-radius: 50%;
+  transition: ease-in 0.2s;
+
+  &:hover {
+    width: 6em;
+    height: 6em;
+  }
+}

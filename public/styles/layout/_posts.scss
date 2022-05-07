@@ -1,0 +1,157 @@
+.posts {
+  max-width: 500px;
+  margin: 0 5em;
+
+  .latest-posts {
+    .singlePost {
+      background: white;
+      border-radius: 10px;
+      margin-bottom: 1em;
+
+      .likedBy {
+        p {
+          font-weight: 500;
+          margin: 1em;
+        }
+      }
+
+      .postBody {
+        display: flex;
+        gap: 0.5em;
+        padding: 0.5em 1em 0em 1em;
+
+        .postEmail {
+          font-weight: 800;
+        }
+        .postText {
+          font-weight: 300;
+        }
+      }
+
+      .poster {
+        display: flex;
+        padding: 1em;
+        align-items: center;
+
+        .posterInfo {
+          display: flex;
+          align-items: center;
+          gap: 1em;
+          width: 100%;
+
+          img {
+            max-width: 50px;
+            border-radius: 50%;
+          }
+        }
+
+        .crud-icons {
+          display: flex;
+          flex-direction: row-reverse;
+          align-items: center;
+          max-width: 85px;
+          gap: 1em;
+
+          img {
+            max-width: 100%;
+            cursor: pointer;
+          }
+        }
+
+        p {
+          margin: 0;
+          font-weight: 500;
+        }
+      }
+
+      .communication {
+        display: flex;
+        align-items: center;
+        padding: 0.3em 1em;
+
+        img {
+          max-width: 70%;
+          cursor: pointer;
+        }
+      }
+
+      .commentsInput {
+        padding: 0 1em 1em 1em;
+
+        emoji-picker {
+          --num-columns: 10;
+          --emoji-size: 1.1em;
+          max-height: 186px;
+          width: 100%;
+        }
+
+        .comments {
+          .repliesContainer {
+            .singleReply {
+              display: flex;
+              gap: 1em;
+              margin: 0 2em;
+              p {
+                font-weight: bolder;
+              }
+            }
+          }
+
+          .singleComment {
+            .reply,
+            .show-replies {
+              display: none;
+            }
+
+            &:hover {
+              .reply,
+              .show-replies {
+                display: block;
+              }
+            }
+            display: flex;
+            gap: 1em;
+            align-items: baseline;
+            h4 {
+              font-size: 1em;
+            }
+            p {
+              font-weight: 300;
+            }
+          }
+        }
+
+        .showComments {
+          max-width: max-content;
+          margin: 1.3em 0px;
+          font-weight: bolder;
+          text-decoration: underline;
+          cursor: pointer;
+          font-size: 0.9em;
+          user-select: none;
+          font-style: italic;
+        }
+
+        .input-group {
+          gap: 3px;
+
+          input {
+            padding: 0 1.8em 0 0.6em;
+          }
+
+          .pick-emoji {
+            position: absolute;
+            right: 4.1em;
+            bottom: 0.5em;
+            cursor: pointer;
+            z-index: 9999999;
+
+            img {
+              width: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

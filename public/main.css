@@ -1,0 +1,370 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&family=Sedgwick+Ave&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  width: 100%;
+  background-color: #c13584;
+  display: flex;
+  gap: 1em;
+  padding: 1em;
+}
+header img {
+  width: 2em;
+  margin-left: 1em;
+}
+
+footer {
+  background-color: #c13584;
+  height: 70px;
+}
+
+.wrapper {
+  min-height: calc(100vh - 70px);
+  font-weight: 100;
+  background-image: url("../public/images/bg.jpg");
+  background-size: cover;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1%;
+}
+.main-content .content {
+  width: 60%;
+}
+.main-content .content .titleContent {
+  text-align: center;
+}
+.main-content .content .home {
+  text-decoration: none;
+}
+.main-content .content .disclaimer {
+  font-weight: 400;
+  margin: 0.5em;
+}
+.main-content .content .hidden {
+  display: none;
+}
+.main-content .content .attention {
+  color: red;
+}
+.main-content .content .bigger {
+  font-size: 2em;
+}
+.main-content .content .danger {
+  background: red;
+}
+.main-content .content .username {
+  color: #c13584;
+}
+.main-content .content .registeredUsersWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.main-content .content .valueRegUser {
+  color: #0d6efd;
+  font-weight: 400;
+}
+.main-content .content .registeredUser {
+  border: 2px solid #c13584;
+  margin: 1em;
+  padding: 1em;
+  font-weight: 300;
+  min-width: 50%;
+}
+.main-content .content .showError {
+  color: red;
+  font-weight: 500;
+  display: block;
+}
+.main-content .content .success {
+  color: green;
+  font-weight: 500;
+}
+.main-content .ads,
+.main-content .navigation {
+  width: 20%;
+}
+
+.navigation {
+  display: flex;
+  flex-flow: column;
+}
+.navigation a {
+  text-decoration: none;
+  font-weight: 400;
+  width: 2em;
+  color: #c13584;
+}
+
+.about-wrapper {
+  text-align: center;
+}
+
+.posts {
+  max-width: 500px;
+  margin: 0 5em;
+}
+.posts .latest-posts .singlePost {
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+.posts .latest-posts .singlePost .likedBy p {
+  font-weight: 500;
+  margin: 1em;
+}
+.posts .latest-posts .singlePost .postBody {
+  display: flex;
+  gap: 0.5em;
+  padding: 0.5em 1em 0em 1em;
+}
+.posts .latest-posts .singlePost .postBody .postEmail {
+  font-weight: 800;
+}
+.posts .latest-posts .singlePost .postBody .postText {
+  font-weight: 300;
+}
+.posts .latest-posts .singlePost .poster {
+  display: flex;
+  padding: 1em;
+  align-items: center;
+}
+.posts .latest-posts .singlePost .poster .posterInfo {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  width: 100%;
+}
+.posts .latest-posts .singlePost .poster .posterInfo img {
+  max-width: 50px;
+  border-radius: 50%;
+}
+.posts .latest-posts .singlePost .poster .crud-icons {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  max-width: 85px;
+  gap: 1em;
+}
+.posts .latest-posts .singlePost .poster .crud-icons img {
+  max-width: 100%;
+  cursor: pointer;
+}
+.posts .latest-posts .singlePost .poster p {
+  margin: 0;
+  font-weight: 500;
+}
+.posts .latest-posts .singlePost .communication {
+  display: flex;
+  align-items: center;
+  padding: 0.3em 1em;
+}
+.posts .latest-posts .singlePost .communication img {
+  max-width: 70%;
+  cursor: pointer;
+}
+.posts .latest-posts .singlePost .commentsInput {
+  padding: 0 1em 1em 1em;
+}
+.posts .latest-posts .singlePost .commentsInput emoji-picker {
+  --num-columns: 10;
+  --emoji-size: 1.1em;
+  max-height: 186px;
+  width: 100%;
+}
+.posts .latest-posts .singlePost .commentsInput .comments .repliesContainer .singleReply {
+  display: flex;
+  gap: 1em;
+  margin: 0 2em;
+}
+.posts .latest-posts .singlePost .commentsInput .comments .repliesContainer .singleReply p {
+  font-weight: bolder;
+}
+.posts .latest-posts .singlePost .commentsInput .comments .singleComment {
+  display: flex;
+  gap: 1em;
+  align-items: baseline;
+}
+.posts .latest-posts .singlePost .commentsInput .comments .singleComment .reply,
+.posts .latest-posts .singlePost .commentsInput .comments .singleComment .show-replies {
+  display: none;
+}
+.posts .latest-posts .singlePost .commentsInput .comments .singleComment:hover .reply,
+.posts .latest-posts .singlePost .commentsInput .comments .singleComment:hover .show-replies {
+  display: block;
+}
+.posts .latest-posts .singlePost .commentsInput .comments .singleComment h4 {
+  font-size: 1em;
+}
+.posts .latest-posts .singlePost .commentsInput .comments .singleComment p {
+  font-weight: 300;
+}
+.posts .latest-posts .singlePost .commentsInput .showComments {
+  max-width: max-content;
+  margin: 1.3em 0px;
+  font-weight: bolder;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.9em;
+  user-select: none;
+  font-style: italic;
+}
+.posts .latest-posts .singlePost .commentsInput .input-group {
+  gap: 3px;
+}
+.posts .latest-posts .singlePost .commentsInput .input-group input {
+  padding: 0 1.8em 0 0.6em;
+}
+.posts .latest-posts .singlePost .commentsInput .input-group .pick-emoji {
+  position: absolute;
+  right: 4.1em;
+  bottom: 0.5em;
+  cursor: pointer;
+  z-index: 9999999;
+}
+.posts .latest-posts .singlePost .commentsInput .input-group .pick-emoji img {
+  width: 25px;
+}
+
+.gallery-container .userImage {
+  width: 30%;
+  transition: all 0.3s ease-in-out;
+  margin: 1em;
+}
+.gallery-container .userImage:hover {
+  width: 50%;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.submitForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.submitForm .editFormField {
+  margin: 1em 0 1em 0;
+}
+.submitForm .editFormField label {
+  color: #0d6efd;
+  font-weight: 400;
+}
+.submitForm .passwordInput,
+.submitForm .password,
+.submitForm .emailInput,
+.submitForm .avatarURL,
+.submitForm .repeatPassword,
+.submitForm .sex,
+.submitForm .date {
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid darkorchid;
+  border-radius: 4px;
+  outline: none;
+  box-sizing: border-box;
+  background: white;
+  width: 14em;
+}
+.submitForm input[type=email]:disabled {
+  background: bisque;
+}
+.submitForm .modal-btns {
+  padding-top: 1em;
+}
+.submitForm .avatarInput {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+.submitForm .labelAvatar {
+  background-color: #99c793;
+  color: white;
+  border-radius: 50px;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  margin: 0.5em 0 0.5em 0;
+  outline: none;
+  padding: 1em 2.6em;
+  transition: all 0.6s;
+  vertical-align: middle;
+  position: relative;
+}
+.submitForm .labelAvatar:hover {
+  filter: brightness(85%);
+}
+.submitForm .labelAvatar::before {
+  content: "📂";
+  font-size: 100%;
+  height: 100%;
+  right: 130%;
+  line-height: 3.3;
+  position: absolute;
+  top: 0px;
+  transition: all 0.3s;
+}
+.submitForm .labelAvatar:hover {
+  filter: brightness(85%);
+}
+.submitForm .labelAvatar:hover::before {
+  right: 86%;
+}
+
+.editBtn,
+.deleteBtn {
+  margin-bottom: 1em;
+  background: #0d6efd;
+  color: white;
+  font-family: "Roboto";
+  font-size: 0.9em;
+  border: none;
+  padding: 0.4em;
+  border-radius: 3px;
+  margin-top: 0.4em;
+  cursor: pointer;
+}
+
+.submitBtn {
+  margin-bottom: 1em;
+  background: darkorchid;
+  color: white;
+  font-family: "Roboto";
+  font-size: 1.2em;
+  border: none;
+  padding: 0.5em;
+  border-radius: 3px;
+  margin-top: 0.4em;
+  cursor: pointer;
+}
+
+.ads img {
+  width: 100%;
+  border-radius: 2%;
+  box-shadow: -7px 9px 11px -5px #000000;
+}
+
+.avatar,
+.userAvatar {
+  width: 5em;
+  height: 5em;
+  border: #c13584 solid 2px;
+  border-radius: 50%;
+  transition: ease-in 0.2s;
+}
+.avatar:hover,
+.userAvatar:hover {
+  width: 6em;
+  height: 6em;
+}

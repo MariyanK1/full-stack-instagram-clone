@@ -1,0 +1,86 @@
+.submitForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  .editFormField {
+    margin: 1em 0 1em 0;
+    label {
+      color: $accent-color;
+      font-weight: 400;
+    }
+  }
+
+  .passwordInput,
+  .password,
+  .emailInput,
+  .avatarURL,
+  .repeatPassword,
+  .sex,
+  .date {
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid $secondary-color;
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+    background: white;
+    width: 14em;
+  }
+
+  input[type="email"]:disabled {
+    background: bisque;
+  }
+
+  .modal-btns {
+    padding-top: 1em;
+  }
+
+  .avatarInput {
+    height: 0;
+    overflow: hidden;
+    width: 0;
+  }
+
+  .labelAvatar {
+    background-color: $upload-btn-color;
+    color: white;
+    border-radius: 50px;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    margin: 0.5em 0 0.5em 0;
+    outline: none;
+    padding: 1em 2.6em;
+    transition: all 0.6s;
+    vertical-align: middle;
+    position: relative;
+
+    &:hover {
+      filter: brightness(85%);
+    }
+
+    &::before {
+      content: "📂";
+      font-size: 100%;
+      height: 100%;
+      right: 130%;
+      line-height: 3.3;
+      position: absolute;
+      top: 0px;
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      filter: brightness(85%);
+
+      &::before {
+        right: 86%;
+      }
+    }
+  }
+}

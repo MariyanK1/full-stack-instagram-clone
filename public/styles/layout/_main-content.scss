@@ -1,0 +1,79 @@
+.main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1%;
+
+  .content {
+    width: 60%;
+
+    .titleContent {
+      text-align: center;
+    }
+
+    .home {
+      text-decoration: none;
+    }
+
+    .disclaimer {
+      font-weight: 400;
+      margin: 0.5em;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .attention {
+      color: $attention-color;
+    }
+
+    .bigger {
+      font-size: $bigger-size;
+    }
+
+    .danger {
+      background: $attention-color;
+    }
+
+    .username {
+      color: $main-color;
+    }
+
+    .registeredUsersWrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .valueRegUser {
+      color: $accent-color;
+      font-weight: 400;
+    }
+
+    .registeredUser {
+      border: 2px solid $main-color;
+      margin: 1em;
+      padding: 1em;
+      font-weight: 300;
+      min-width: 50%;
+    }
+
+    .showError {
+      color: $attention-color;
+      font-weight: 500;
+      display: block;
+    }
+
+    .success {
+      color: green;
+      font-weight: 500;
+    }
+  }
+
+  .ads,
+  .navigation {
+    width: 20%;
+  }
+}
