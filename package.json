@@ -10,17 +10,9 @@
     "db": "node db.js",
     "start": "npm run open && npm run serve"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://mariyan4o@bitbucket.org/mariyan4o/instagram-clone.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://bitbucket.org/mariyan4o/instagram-clone/issues"
-  },
-  "homepage": "https://bitbucket.org/mariyan4o/instagram-clone#readme",
   "devDependencies": {
     "express": "^4.17.3",
     "multer": "^1.4.4",
